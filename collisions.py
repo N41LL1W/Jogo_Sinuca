@@ -1,8 +1,10 @@
 import itertools
 import random
+import zope.event
+import config
+import event
 import physics
 
-import event
 
 def resolve_all_collisions(balls, holes, table_sides):
     for ball_hole_combination in itertools.product(balls, holes):

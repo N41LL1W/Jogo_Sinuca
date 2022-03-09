@@ -1,6 +1,9 @@
 import pygame
+import gamestate
+import graphics
 import event
 import collisions
+import config
 
 was_closed = False
 while not was_closed:
