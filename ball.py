@@ -170,6 +170,7 @@ class BallSprite(pygame.sprite.Sprite):
                     not collisions.check_if_ball_touches_balls(events["mouse_pos"], self.number, game_state.balls):
                 if behind_separation_line:
                     if events["mouse_pos"][0] <=config.white_ball_initial_pos[0]:
+                        self.move_to(events["mouse_pos"])
                 else:
                     self.move_to(events["mouse_pos"])
             game_state.redraw_all()

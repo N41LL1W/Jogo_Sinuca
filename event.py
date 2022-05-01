@@ -7,8 +7,10 @@ class GameEvent():
         self.type = event_type
         self.data = data
 
+
 def set_allowed_events():
     pygame.event.set_allowed([pygame.KEYDOWN, pygame.QUIT])
+
 
 def events():
     closed = False
@@ -21,8 +23,7 @@ def events():
             if event.key == pygame.K_ESCAPE:
                 quit = True
 
-
     return {"quit_to_main_menu": quit,
             "closed": closed,
-            "clicked": pygame.mouse.get_pressed() [0],
+            "clicked": pygame.mouse.get_pressed()[0],
             "mouse_pos": np.array(pygame.mouse.get_pos())}
