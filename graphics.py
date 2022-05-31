@@ -60,13 +60,14 @@ def draw_main_menu(game_state):
 
 
 def iterate_until_button_press(buttons, game_state, text_ending_place, text_starting_place):
+
     button_clicked = 0
     while button_clicked == 0:
         pygame.display.update()
         user_events = event.events()
 
         for num in range(1, len(buttons)):
-            if np.all((np.less(text_starting_place[num] - config.menu_spacing, user_events["mouse pos"]),
+            if np.all((np.less(text_starting_place[num] - config.menu_spacing, user_events["mouse_pos"]),
                        np.greater(text_ending_place[num] + config.menu_spacing, user_events["mouse_pos"]))):
                 if user_events["clicked"]:
                     button_clicked = num

@@ -98,7 +98,7 @@ table_coeff_of_restitution = 0.9
 
 menu_text_color = (255, 255, 255)
 menu_text_selected_color = (0, 0, 255)
-menu_title_text = " Sinuca "
+menu_title_text = "Sinuca"
 menu_buttons = ["Jogar Sinica", "Sair"]
 menu_margin = 20
 menu_spacing = 10

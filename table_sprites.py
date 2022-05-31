@@ -14,12 +14,11 @@ class Hole(pygame.sprite.Sprite):
         self.image.fill((200, 200, 200))
         self.image.set_colorkey((200, 200, 200))
 
-        pygame.draw.circle(self.image, (0, 0, 0),\
-                            (config.hole_radius, config.hole_radius), config.hole_radius, 0)
+        pygame.draw.circle(self.image, (0, 0, 0),
+                           (config.hole_radius, config.hole_radius), config.hole_radius, 0)
         self.rect = self.image.get_rect()
         self.rect.center = (x, y)
         self.pos = np.array([x, y])
-
 
 
 class TableSide():
@@ -36,7 +35,7 @@ class TableSide():
                 self.size[1] += 1
 
 
-class TableColoriong(pygame.sprite.Sprite):
+class TableColoring(pygame.sprite.Sprite):
     def __init__(self, table_size, color, table_points):
         pygame.sprite.Sprite.__init__(self)
         self.points = table_points
@@ -67,7 +66,7 @@ class TableColoriong(pygame.sprite.Sprite):
 
         if game_state.ball_assignment is not None:
             start_x = np.array([config.table_margin + config.hole_radius * 3,
-                                config.resolution[0] / 2 + config.hole_radius *3])
+                                config.resolution[0] / 2 + config.hole_radius * 3])
             start_y = config.resolution[1] - config.table_margin - self.font.size(config.player1_target_text)[1] / 2
 
             self.image.blit(self.target_ball_text[0], [start_x[0], start_y + config.ball_radius / 2])
@@ -76,9 +75,7 @@ class TableColoriong(pygame.sprite.Sprite):
             for ball in game_state.balls:
                 do_draw = ball.number != 0 and ball.number != 8
 
-
                 draw_to_player = []
-
 
                 if do_draw:
                     if game_state.ball_assignment[gamestate.Player.Player1] == ball.ball_type:
@@ -92,9 +89,7 @@ class TableColoriong(pygame.sprite.Sprite):
                     if game_state.potting_8ball[gamestate.Player.Player2]:
                         draw_to_player.append(2)
 
-
                 for player in draw_to_player:
-
                     ball.create_image(self.image, (start_x[player - 1], start_y))
                     start_x[player - 1] += config.ball_radius * 2 + config.target_ball_spacing
 
