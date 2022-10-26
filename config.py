@@ -43,7 +43,7 @@ player1_cue_color = (200, 100, 0)
 player2_cue_color = (0, 100, 200)
 cue_hit_power = 3
 cue_length = 250
-cue_thinckeness = 4
+cue_thickness = 4
 cue_max_displacement = 100
 
 # Configurar movimento do taco
@@ -56,7 +56,7 @@ ball_radius = 14
 ball_mass = 14
 speed_angle_threshold = 0.09
 visible_angle_threshold = 0.05
-ball_collors = [
+ball_colors = [
     (255, 255, 255),
     (0, 200, 200),
     (0, 0, 200),

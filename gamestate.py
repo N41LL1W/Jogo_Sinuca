@@ -218,6 +218,7 @@ class GameState:
                 solids_remaining = solids_remaining or not remaining_ball.ball_type == BallType.Striped
         ball_type_remaining = {BallType.Solid: solids_remaining, BallType.Striped: stripes_remaining}
 
+
         self.potting_8ball = {Player.Player1: not ball_type_remaining[self.ball_assignment[Player.Player1]],
                               Player.Player2: not ball_type_remaining[self.ball_assignment[Player.Player2]]}
 

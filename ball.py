@@ -20,7 +20,7 @@ class Ball():
         self.velocity += (force / config.ball_mass) * time
 
     def set_velocity(self, new_velocity):
-        self.velocity = np.array(nem_velocity, dtype=float)
+        self.velocity = np.array(new_velocity, dtype=float)
 
     def move_to(self, pos):
         self.pos = np.array(pos, dtype=float)
@@ -124,7 +124,7 @@ class BallSprite(pygame.sprite.Sprite):
                 angle = -math.degrees(
                     math.atan(self.label_offset[1] / self.label_offset[0]))
                 label = pygame.transform.scale(
-                    label, (int(config.ball_radius * dist_from_center), config.ball.radius))
+                    label, (int(config.ball_radius * dist_from_center), config.ball_radius))
                 label = pygame.transform.rotate(label, angle)
         new_sprite.blit(
             label, self.label_offset[:2] + (sprite_dimension - label.get_size()) / 2)

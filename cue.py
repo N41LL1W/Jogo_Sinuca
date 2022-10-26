@@ -15,7 +15,7 @@ class Cue(pygame.sprite.Sprite):
         self.color = config.player1_cue_color
         self.target_ball = target
         self.visible = False
-        self.displacement = config.ball_radious
+        self.displacement = config.ball_radius
         self.sprite_size = np.repeat(
             [config.cue_length + config.cue_max_displacement], 2)
         self.clear_canvas()
@@ -69,7 +69,7 @@ class Cue(pygame.sprite.Sprite):
         if displacement > config.cue_max_displacement:
             self.displacement = config.cue_max_displacement
         elif displacement < config.ball_radius:
-            self.displacement < config.ball_radius
+            self.displacement = config.ball_radius
         else:
             self.displacement = displacement
 
@@ -138,7 +138,7 @@ class Cue(pygame.sprite.Sprite):
 
         game_state.redraw_a11(update=False)
         self.draw_lines(game_state, self.target_ball, prev_angle +
-                        math.pi, config.tablle_color)
+                        math.pi, config.table_color)
         self.draw_lines(game_state, self.target_ball, self.angle +
                         math.pi, (255, 255, 255))
         pygame.display.flip()

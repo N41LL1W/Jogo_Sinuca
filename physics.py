@@ -29,7 +29,7 @@ def triangle_area(side1, side2, side3):
 
     half_perimetre = abs((side1 + side2 + side3)* 0.5)
     return math.sqrt(half_perimetre * (half_perimetre - abs(side1)) * (half_perimetre - abs(side2)) * (
-        half_perimetre -abs(side3)))
+        half_perimetre - abs(side3)))
 
 
 

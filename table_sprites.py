@@ -21,8 +21,8 @@ class Hole(pygame.sprite.Sprite):
         self.pos = np.array([x, y])
 
 
-class TableSide():
-    def __int__(self, line):
+class TableSide:
+    def __int__(self, *args):
         self.line = np.array(line)
         self.middle = (self.line[0] + self.line[1]) / 2
         self.size = np.round(np.abs(self.line[0] - self.line[1]))

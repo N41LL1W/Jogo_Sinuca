@@ -30,7 +30,7 @@ while not was_closed:
                     if game.cue.is_clicked(events):
                         game.cue.cue_is_active(game, events)
                     elif game.can_move_white_ball and game.white_ball.is_clicked(events):
-                        game.white_ball.is_active(game, game.is_behind_line_breaak())
+                        game.white_ball.is_active(game, game.is_behind_line_break())
 
         was_closed = events["closed"]
 
